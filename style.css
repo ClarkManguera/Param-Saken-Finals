@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Segoe UI Symbol', 'Segoe UI', sans-serif;
 }
 
 body {
@@ -10,54 +10,67 @@ body {
   color: #222;
 }
 
-/* NAVBAR */
+/* ===== NAVBAR ===== */
 .navbar {
-  background-color: #ffffff;
-  color: #000;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 60px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background-color: #fff;
+  padding: 15px 90px 15px 120px; /* left increased, right decreased */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
-  font-weight: bold;
-  color: #000;
+  gap: 8px;
+  margin-left: 35px; /* move logo group a bit more right */
 }
 
 .logo img {
-  height: 35px;
+  height: 22px;
+  width: auto;
 }
 
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-.navbar a {
-  color: #000;
-  text-decoration: none;
+.logo span {
   font-size: 15px;
+  font-weight: 600;
+  color: #101828;
+}
+
+.navbar nav ul {
+  display: flex;
+  gap: 35px;
+  list-style: none;
+  margin: 0;
+  padding-right: 70px; /* move nav items slightly more to the left */
+}
+
+.navbar nav ul li a {
+  text-decoration: none;
+  color: #101828;
+  font-size: 14px;
   font-weight: 500;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
 }
 
-.navbar a.active,
-.navbar a:hover {
-  border-bottom: 2px solid #000;
+.navbar nav ul li a.active,
+.navbar nav ul li a:hover {
+  background-color: #f2f4f7;
 }
-
 
 /* HERO SECTION */
 .hero {
+  background-color: #0a0d1c;
+  color: #fff;
   text-align: center;
-  background-color: #0b0e17;
-  color: white;
-  padding: 80px 20px;
+  padding: 100px 20px 80px;
+  margin-top: 0;
 }
 
 .hero h1 {
@@ -110,6 +123,14 @@ body {
   margin-bottom: 30px;
 }
 
+.vehicles {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
 .vehicle-list {
   display: flex;
   justify-content: center;
@@ -119,53 +140,89 @@ body {
 
 .vehicle-card {
   background: #fff;
-  border-radius: 10px;
+  border-radius: 12px;
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.08);
   padding: 20px;
-  width: 250px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 320px;
   text-align: left;
+  font-family: "Segoe UI Symbol", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .vehicle-card img {
   width: 100%;
+  height: auto;
   border-radius: 8px;
+  margin-bottom: 15px;
 }
 
-.vehicle-card h3 {
-  margin-top: 10px;
+/* Title + Price aligned on same line */
+.vehicle-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+.vehicle-header h3 {
   font-size: 16px;
+  font-weight: 600;
+  color: #111;
 }
 
-.vehicle-card .price {
-  font-weight: bold;
-  margin: 5px 0;
+.vehicle-header .price {
+  font-size: 15px;
+  font-weight: 500;
+  color: #111;
 }
 
+/* Vehicle type */
 .vehicle-card .type {
-  color: #777;
-  margin-bottom: 8px;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 12px;
+  width: 100%;
+}
+
+/* Tags */
+.tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
+  width: 100%;
 }
 
 .tags span {
   display: inline-block;
-  background-color: #f0f0f0;
+  background-color: #f3f4f6;
   color: #333;
   border-radius: 20px;
-  padding: 5px 10px;
+  padding: 5px 12px;
   font-size: 12px;
-  margin-right: 5px;
 }
 
+/* Button */
 .vehicle-card button {
   background-color: #0b0e17;
   color: #fff;
   border: none;
   width: 100%;
-  padding: 10px;
-  border-radius: 6px;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
   cursor: pointer;
-  margin-top: 10px;
+  transition: all 0.2s ease;
 }
+
+.vehicle-card button:hover {
+  background-color: #1a1d2b;
+}
+
 
 /* WHY CHOOSE */
 .why {
@@ -197,67 +254,141 @@ body {
 
 /* FOOTER */
 footer {
-  background-color: #0b0e17;
-  color: white;
-  padding: 50px 60px 20px;
+  background-color: #101828;
+  color: #f5f5f5;
+  font-family: 'Segoe UI Symbol', 'Segoe UI', sans-serif;
+  padding: 40px 0 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .footer-container {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; /* spreads left, middle, right columns */
+  align-items: flex-start; /* keeps them level */
   flex-wrap: wrap;
-  gap: 40px;
+  border-bottom: 1px solid #1e293b;
+  padding-bottom: 30px;
+  max-width: 1100px;
+  width: 90%;
 }
 
+/* Columns */
+.footer-about,
+.footer-contact,
+.footer-links {
+  text-align: left;
+}
+
+/* Adjust positions */
 .footer-about {
-  max-width: 300px;
+  flex: 1;
+  max-width: 360px;
 }
 
-.footer-about .footer-logo {
-  height: 40px;
-  margin-bottom: 10px;
+.footer-contact {
+  flex: 1;
+  max-width: 320px;
+  margin-left: 60px; /* moves closer to center */
 }
 
-.footer-about p {
-  color: #ccc;
-  font-size: 14px;
-  margin-bottom: 15px;
+.footer-links {
+  flex: 1;
+  max-width: 200px;
+  text-align: left;
+  margin-left: auto; /* pushes Quick Links to the far right */
 }
 
-.social-icons img {
-  height: 25px;
-  margin-right: 10px;
-  cursor: pointer;
-}
-
-.footer-contact .contact-item {
+/* Logo and about */
+.footer-logo-text {
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
+}
+
+.footer-logo {
+  width: 28px;
+  height: auto;
+}
+
+.footer-brand {
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.footer-about p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 16px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 12px;
+}
+
+.footer-socials img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+  transform: scale(1.1);
+}
+
+/* Contact and links */
+.footer-contact h4,
+.footer-links h4 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #ffffff;
+}
+
+.footer-contact ul,
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-contact li,
+.footer-links li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+  color: #cbd5e1;
+  margin-bottom: 8px;
 }
 
 .footer-contact img {
-  height: 20px;
-}
-
-.footer-links ul {
-  list-style: none;
+  width: 14px;
+  height: 14px;
+  object-fit: contain;
 }
 
 .footer-links a {
   text-decoration: none;
-  color: #ccc;
-  font-size: 14px;
+  color: #cbd5e1;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: white;
+  color: #ffffff;
 }
 
-.copyright {
+/* Bottom line */
+.footer-bottom {
   text-align: center;
-  margin-top: 30px;
-  font-size: 13px;
-  color: #aaa;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #94a3b8;
+  width: 100%;
 }
