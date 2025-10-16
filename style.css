@@ -683,3 +683,477 @@ footer {
   font-style: italic;
   line-height: 1.7;
 }
+
+/* Settings Layout */
+.settings-container {
+  width: 80%;
+  max-width: 900px;
+  margin: 60px auto;
+}
+
+.settings-container h1 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #111;
+}
+
+/* Tabs */
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #f9fafb;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 10px 25px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #111;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab img {
+  width: 16px;
+  height: 16px;
+}
+
+.tab:hover {
+  background: #f1f2f3;
+}
+
+.tab.active {
+  background: #f1f2f3;
+  color: #000;
+  font-weight: 600;
+}
+
+
+/* Card Section */
+.card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  padding: 25px;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card h3 img {
+  width: 16px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-group {
+  display: flex;
+  gap: 20px;
+}
+
+.field {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.field label {
+  font-size: 13px;
+  color: #333;
+}
+
+.field input {
+  background: #f5f5f7;
+  border: none;
+  border-radius: 6px;
+  padding: 10px;
+  outline: none;
+  font-size: 14px;
+}
+
+.field.full {
+  width: 100%;
+}
+
+.input-icon {
+  position: relative;
+}
+
+.input-icon img {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  opacity: 0.6;
+}
+
+.input-icon input {
+  padding-left: 35px;
+}
+
+/* Save Button */
+.save-btn {
+  background: #0c0c1f;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  width: fit-content;
+  margin-left: auto;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background: #1c1c3f;
+}
+
+.save-btn img {
+  width: 15px;
+}
+
+/* General Font */
+body, button, input, label, p, h2, h3 {
+  font-family: 'Segoe UI Symbol', sans-serif;
+}
+
+/* Settings Card */
+.settings-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 30px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.settings-card h2 {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 600;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.settings-card h3 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+label {
+  display: block;
+  font-size: 13px;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+input[type="password"] {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #f3f4f6;
+  font-size: 14px;
+  margin-bottom: 15px;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+input[type="password"]:focus {
+  background: #e8eaed;
+}
+
+/* Divider */
+hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 20px 0;
+}
+
+/* Toggle Switch */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 46px;
+  height: 24px;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  background-color: #ccc;
+  border-radius: 34px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  transition: 0.3s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.3s;
+}
+
+input:checked + .slider {
+  background-color: #111827;
+}
+
+input:checked + .slider:before {
+  transform: translateX(22px);
+}
+
+/* Save Button */
+.save-btn {
+  background: #111827;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+  float: right;
+  transition: background 0.3s ease;
+}
+
+.save-btn:hover {
+  background: #1f2937;
+}
+
+/* === SETTINGS PAGE REFINEMENTS === */
+
+/* Resize lock icon in Security Settings header */
+.security-section h2 img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+}
+
+
+/* Container */
+.settings-container {
+  width: 85%;
+  max-width: 950px;
+  margin: 80px auto;
+  padding-bottom: 60px;
+}
+
+/* Tabs */
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+  border-radius: 50px;
+  padding: 10px;
+  margin-bottom: 30px;
+  box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+}
+
+.tab {
+  flex: 1;
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 12px 25px;
+  font-weight: 500;
+  font-size: 14px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #222;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.tab img {
+  width: 18px;
+  height: 18px;
+}
+
+.tab.active {
+  background: #f2f3f5;
+  font-weight: 600;
+}
+
+/* Tab Content */
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* Card */
+.settings-card,
+.card {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  padding: 30px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.settings-card:hover,
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+/* Form */
+.settings-card input,
+.card input {
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 10px;
+  width: 100%;
+  font-size: 14px;
+  color: #111;
+  transition: border 0.3s ease, background 0.3s ease;
+}
+
+.settings-card input:focus,
+.card input:focus {
+  border-color: #111827;
+  background: #fff;
+  outline: none;
+}
+
+/* Save Button */
+.save-btn {
+  background: #111827;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.save-btn img {
+  width: 16px;
+}
+
+.save-btn:hover {
+  background: #1f2937;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.settings-card h2 img,
+.card h3 img {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+ /* Align toggle switch to the right */
+.two-factor {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+}
+
+/* Fix the text and spacing of the label */
+.two-factor .text {
+  flex: 1;
+}
+
+/* Ensure the toggle switch stays on the right */
+.toggle-switch {
+  margin-left: auto;
+}
+
+/* Adjust the Save Changes button */
+.save-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #0b132b;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: 20px;
+  transition: 0.3s ease;
+}
+
+.save-btn:hover {
+  background-color: #1c2541;
+}
+
+.save-btn img {
+  width: 18px;
+  height: 18px;
+}
