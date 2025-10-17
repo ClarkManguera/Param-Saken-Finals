@@ -1,1 +1,797 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f7f8fa;
+    color: #222;
+    overflow-x: hidden;
+}
+
+/* ===== NAVBAR (Your Original Styles) ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 15px 90px 15px 120px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: 35px;
+}
+
+.logo img {
+    height: 22px;
+    width: auto;
+}
+
+.logo span {
+    font-size: 15px;
+    font-weight: 600;
+    color: #101828;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 35px;
+    list-style: none;
+    margin: 0;
+    padding-right: 70px;
+}
+
+.navbar nav ul li a {
+    text-decoration: none;
+    color: #101828;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 14px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.navbar nav ul li a.active,
+.navbar nav ul li a:hover {
+    background-color: #f2f4f7;
+}
+
+/* ==================================== */
+/* ===== ACCOUNT SETTINGS CONTENT ===== */
+/* ==================================== */
+
+.settings-container {
+    max-width: 1000px;
+    margin: 40px auto 60px auto;
+    padding: 0 20px;
+}
+
+.settings-container h1 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 30px;
+}
+
+/* --- Tabs Navigation (FULLY ROUNDED CAPSULE STYLE) --- */
+.tabs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: none;
+    margin-bottom: 20px;
+    /* CRITICAL: Set gap to 0 to make them touch */
+    gap: 0; 
+    /* Padding to create the outer rounded rectangle container */
+    padding: 8px; 
+    background-color: #fff;
+    /* CRITICAL FIX: Set border-radius high to achieve the full capsule shape for the container */
+    border-radius: 50px; 
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center content within the pill */
+    gap: 8px;
+    background: none;
+    border: none;
+    /* Slightly more vertical padding for a taller pill look */
+    padding: 10px 18px; 
+    font-size: 15px;
+    font-weight: 500;
+    color: #667085;
+    cursor: pointer;
+    /* CRITICAL: Set border-radius high to achieve the full capsule shape for the pill */
+    border-radius: 50px; 
+    transition: all 0.2s ease;
+    white-space: nowrap;
+    /* Make the tabs fill the horizontal space evenly */
+    flex-grow: 1; 
+}
+
+.tab img {
+    height: 18px;
+    width: 18px;
+    object-fit: contain;
+    filter: none;
+}
+
+/* Active tab styles (Light gray background for the active pill) */
+.tab.active {
+    color: #101828;
+    font-weight: 600;
+    background-color: #f2f4f7; 
+    border-bottom: none;
+}
+
+/* Hover styles (Light gray background for the hovered pill) */
+.tab:hover:not(.active) {
+    background-color: #f9fafb;
+}
+
+
+/* --- Card Container --- */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.card, .settings-card {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #e4e7ec, 0 4px 12px rgba(0, 0, 0, 0.05); 
+    border-radius: 12px;
+    padding: 30px 40px;
+    position: relative;
+    padding-bottom: 80px; 
+}
+
+/* --- Card Header (Personal Information) --- */
+.card-header-with-icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e4e7ec;
+    gap: 10px; 
+}
+
+.header-icon {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0.1); 
+}
+
+.card-header-with-icon h3 {
+    font-size: 18px; 
+    font-weight: 600;
+    color: #101828;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* --- Form and Input Fields --- */
+.input-group {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 15px;
+}
+
+.field {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 15px; 
+}
+
+.input-group .field {
+    flex: 1;
+}
+
+.field label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #344054;
+    margin-bottom: 6px;
+}
+
+/* General input styling (Light gray background - matching image_31fb38.png) */
+.field input[type="text"],
+.field input[type="email"],
+.field input[type="password"] {
+    width: 100%;
+    padding: 10px 14px; 
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #101828;
+    background-color: #f9fafb; 
+    box-shadow: none;
+    transition: border-color 0.2s;
+    height: 44px;
+}
+
+.field input:focus {
+    border-color: #98a2b3;
+    outline: none;
+    box-shadow: 0 0 0 1px #98a2b3;
+}
+
+
+/* Internal Icon Styling (FIXED OVERLAP FOR EMAIL/PHONE) */
+.input-with-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 44px; /* Match input field height */
+}
+
+/* CRITICAL FIX: Ensure the input field's left padding is DEFINITIVELY set to 50px */
+.input-with-icon-wrapper input {
+    width: 100%;
+    height: 100%;
+    
+    /* Forceful padding to push text past the icon. */
+    padding-left: 50px !important; 
+    
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 14px; 
+    
+    background-color: #f9fafb; 
+    box-sizing: border-box; 
+}
+
+.input-icon-img {
+    position: absolute;
+    left: 14px; /* Icon starts 14px from the left */
+    top: 50%; 
+    transform: translateY(-50%); 
+    display: flex;
+    align-items: center; 
+    z-index: 10; 
+    pointer-events: none; 
+}
+
+.input-icon-img img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    filter: brightness(0.2); 
+}
+
+
+.field.full {
+    margin-bottom: 20px;
+}
+
+/* --- Save Changes Button (Icon is WHITE) --- */
+.save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #101828;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+    
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+    width: 160px;
+    height: 44px;
+}
+
+.save-btn:hover {
+    background-color: #344054;
+}
+
+.save-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    /* Ensures the icon is white */
+    filter: brightness(0) invert(1); 
+}
+
+
+/* --- Card Container (Global settings, no change) --- */
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.card, .settings-card {
+    background-color: #fff;
+    box-shadow: 0 0 0 1px #e4e7ec, 0 4px 12px rgba(0, 0, 0, 0.05); 
+    border-radius: 12px;
+    padding: 30px 40px;
+    position: relative;
+    padding-bottom: 80px; 
+}
+
+/* --- Account Info Card Header (No change) --- */
+.card-header-with-icon {
+    display: flex;
+    align-items: center;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+    border-bottom: 1px solid #e4e7ec;
+    gap: 10px; 
+}
+
+.header-icon {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0.1); 
+}
+
+.card-header-with-icon h3 {
+    font-size: 18px; 
+    font-weight: 600;
+    color: #101828;
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+/* --- Form and Input Fields (No change) --- */
+.input-group {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 15px;
+}
+/* ... (rest of input styling blocks for .field, .field label, input[type="text"], etc. remain the same) ... */
+
+
+/* ==================================== */
+/* === STYLES FOR SECURITY/PAYMENT/NOTIFICATIONS TABS (settings-card) === */
+/* ==================================== */
+
+/* Security Card Heading (Different structure than Account tab, matching image_311df9.png) */
+.settings-card h2 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    color: #101828;
+    padding-bottom: 25px;
+    margin-bottom: 15px; /* Reduced margin to look tighter to the content */
+    border-bottom: 1px solid #e4e7ec;
+}
+.settings-card h2 img {
+    width: 20px; 
+    height: 20px;
+    object-fit: contain;
+    filter: brightness(0.1); 
+}
+
+/* Security Tab - Change Password Section */
+.settings-card .section {
+    margin-bottom: 25px;
+}
+
+.settings-card .section h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 20px;
+}
+
+/* Apply light gray background to password inputs (consistent with Account tab) */
+.settings-card input[type="password"] {
+    width: 100%;
+    padding: 10px 14px; 
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    font-size: 16px;
+    color: #101828;
+    background-color: #f9fafb; /* Light gray background */
+    box-shadow: none;
+    height: 44px;
+    margin-bottom: 20px;
+}
+.settings-card input[type="password"]:focus {
+    border-color: #98a2b3;
+    outline: none;
+    box-shadow: 0 0 0 1px #98a2b3;
+}
+
+.settings-card label {
+    font-size: 14px;
+    font-weight: 500;
+    color: #344054;
+    margin-bottom: 6px;
+    display: block; /* Ensures label takes up full line above input */
+}
+
+/* Horizontal Rule for separating sections */
+.settings-card hr {
+    border: 0;
+    height: 1px;
+    background: #e4e7ec;
+    margin: 30px 0;
+}
+
+/* Two-Factor Authentication Section */
+.two-factor {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.two-factor .text h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #101828;
+    margin-bottom: 4px;
+}
+
+.two-factor .text p {
+    font-size: 13px;
+    color: #667085;
+}
+
+
+/* Toggle Switch Styles (Standard switch for 2FA and Notifications) */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 28px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #101828; /* Dark color when active */
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #101828;
+}
+
+input:checked + .slider:before {
+  transform: translateX(20px);
+}
+
+/* Rounded sliders (Round shape for the toggle) */
+.slider.round {
+  border-radius: 28px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+
+/* Payment Tab Styles */
+.settings-card h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #101828;
+    margin-top: 25px;
+    margin-bottom: 15px;
+}
+
+.saved-methods .method-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    border: 1px solid #e4e7ec;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.method-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.method-info img {
+    width: 40px;
+    height: auto;
+    object-fit: contain;
+}
+
+.method-text h4 {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.method-text p {
+    font-size: 13px;
+    color: #667085;
+    margin: 0;
+}
+
+.remove-btn {
+    background: none;
+    border: 1px solid #e4e7ec;
+    color: #667085;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 13px;
+    transition: all 0.2s ease;
+}
+
+.remove-btn:hover {
+    background-color: #f7f8fa;
+}
+
+.add-methods button {
+    background-color: #f2f4f7;
+    border: 1px solid #e4e7ec;
+    color: #101828;
+    padding: 10px 18px;
+    border-radius: 8px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.add-methods button:hover {
+    background-color: #e4e7ec;
+}
+
+
+/* Notifications Tab Styles */
+.notification-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #f2f4f7; /* Very subtle line */
+}
+.notification-item:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.notif-text h4 {
+    font-size: 15px;
+    font-weight: 500;
+    color: #101828;
+    margin-top: 0;
+    margin-bottom: 4px;
+}
+
+.notif-text p {
+    font-size: 13px;
+    color: #667085;
+    margin: 0;
+}
+
+/* --- Save Changes Button (No change) --- */
+.save-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #101828;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease;
+    
+    position: absolute;
+    right: 40px;
+    bottom: 30px;
+    width: 160px;
+    height: 44px;
+}
+
+.save-btn:hover {
+    background-color: #344054;
+}
+
+.save-btn img {
+    width: 16px;
+    height: 16px;
+    object-fit: contain;
+    /* Ensures the icon is white */
+    filter: brightness(0) invert(1); 
+}
+
+/* --- Footer Styles (No change) --- */
+/* ... (Footer styles remain the same) ... */
+/* --- Footer Styles (Your Original) --- */
+footer {
+    background-color: #101828;
+    color: #f5f5f5;
+    font-family: 'Segoe UI Symbol', 'Segoe UI', sans-serif;
+    padding: 40px 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1e293b;
+    padding-bottom: 30px;
+    max-width: 1100px;
+    width: 90%;
+}
+
+.footer-about,
+.footer-contact,
+.footer-links {
+    text-align: left;
+}
+
+.footer-about {
+    flex: 1;
+    max-width: 360px;
+}
+
+.footer-contact {
+    flex: 1;
+    max-width: 320px;
+    margin-left: 60px;
+}
+
+.footer-links {
+    flex: 1;
+    max-width: 200px;
+    text-align: left;
+    margin-left: auto;
+}
+
+.footer-logo-text {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 12px;
+}
+
+.footer-logo {
+    width: 28px;
+    height: auto;
+}
+
+.footer-brand {
+    font-size: 18px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.footer-about p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #cbd5e1;
+    margin-bottom: 16px;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    transition: transform 0.3s ease;
+}
+
+.footer-socials img:hover {
+    transform: scale(1.1);
+}
+
+.footer-contact h4,
+.footer-links h4 {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.footer-contact ul,
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-contact li,
+.footer-links li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    color: #cbd5e1;
+    margin-bottom: 8px;
+}
+
+.footer-contact img {
+    width: 14px;
+    height: 14px;
+    object-fit: contain;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #cbd5e1;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    font-size: 12px;
+    color: #94a3b8;
+    width: 100%;
+}
 
