@@ -1,202 +1,279 @@
 <!DOCTYPE html> 
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Account Settings | Param Saken Car Rentals</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account Settings | Param Saken Car Rentals</title>
+    <link rel="stylesheet" href="settings.css">
 </head>
 <body>
 
-  <!-- Navbar -->
-  <header class="navbar">
-    <div class="logo">
-      <img src="img/logoblacktransperent.png" alt="Param Saken Logo">
-      <span>Param Saken</span>
-    </div>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="#">Book Now</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="#">Profile</a></li>
-        <li><a href="#" class="active">Settings</a></li>
-      </ul>
-    </nav>
-  </header>
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logoblacktransperent.png" alt="Param Saken Logo">
+            <span>Param Saken</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#">Profile</a></li>
+                <li><a href="#" class="active">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- MAIN SETTINGS -->
-  <main class="settings-container">
-    <h1>Account Settings</h1>
+    <main class="settings-container">
+        <h1>Account Settings</h1>
 
-    <!-- Tabs -->
-    <div class="tabs">
-      <button class="tab active" data-tab="account"><img src="img/usericon.png"> Account Info</button>
-      <button class="tab" data-tab="security"><img src="img/lockicon.png"> Security</button>
-      <button class="tab" data-tab="payment"><img src="img/cardicon.png"> Payment</button>
-      <button class="tab" data-tab="notifications"><img src="img/bellicon.png"> Notifications</button>
-    </div>
-
-    <!-- ACCOUNT INFO TAB -->
-    <div id="account" class="tab-content active">
-      <div class="card">
-        <h3><img src="img/usericon.png"> Personal Information</h3>
-
-        <form>
-          <div class="input-group">
-            <div class="field">
-              <label>First Name</label>
-              <input type="text" value="Juan">
-            </div>
-            <div class="field">
-              <label>Last Name</label>
-              <input type="text" value="Dela Cruz">
-            </div>
-          </div>
-
-          <div class="field full">
-            <label>Email Address</label>
-            <div class="input-icon">
-              <img src="img/emailicon.png" alt="">
-              <input type="email" value="juan@email.com">
-            </div>
-          </div>
-
-          <div class="field full">
-            <label>Phone Number</label>
-            <div class="input-icon">
-              <img src="img/phoneicon.png" alt="">
-              <input type="text" value="+63 917 123 4567">
-            </div>
-          </div>
-
-          <div class="field full">
-            <label>Address</label>
-            <input type="text" value="123 Main Street, Angeles City, Pampanga">
-          </div>
-
-          <button type="submit" class="save-btn"><img src="img/saveicon.png" alt=""> Save Changes</button>
-        </form>
-      </div>
-    </div>
-
-    <!-- SECURITY TAB -->
-    <div id="security" class="tab-content">
-      <div class="settings-card">
-        <h2><img src="img/lockicon.png" alt=""> Security Settings</h2>
-
-        <div class="section">
-          <h3>Change Password</h3>
-
-          <label for="current">Current Password</label>
-          <input type="password" id="current" placeholder="Enter current password">
-
-          <label for="new">New Password</label>
-          <input type="password" id="new" placeholder="Enter new password">
-
-          <label for="confirm">Confirm New Password</label>
-          <input type="password" id="confirm" placeholder="Re-enter new password">
+        <div class="tabs">
+            <button class="tab active" data-tab="account"><img src="img/usericon.png"> Account Info</button>
+            <button class="tab" data-tab="security"><img src="img/lockicon.png"> Security</button>
+            <button class="tab" data-tab="payment"><img src="img/cardicon.png"> Payment</button>
+            <button class="tab" data-tab="notifications"><img src="img/bellicon.png"> Notifications</button>
         </div>
 
-        <hr>
+        <div id="account" class="tab-content active">
+            <div class="card">
+                <div class="card-header-with-icon">
+                    <img src="img/usericon.png" alt="User Icon" class="header-icon">
+                    <h3>Personal Information</h3>
+                </div>
 
-       <div class="two-factor">
-  <div class="text">
-    <h4>Two-Factor Authentication</h4>
-    <p>Add an extra layer of security</p>
-  </div>
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round"></span>
-  </label>
-</div>
+                <form>
+                    <div class="input-group">
+                        <div class="field">
+                            <label>First Name</label>
+                            <input type="text" value="Juan">
+                        </div>
+                        <div class="field">
+                            <label>Last Name</label>
+                            <input type="text" value="Dela Cruz">
+                        </div>
+                    </div>
 
-<button type="submit" class="save-btn">
-  <img src="img/saveicon.png" alt=""> Save Changes
-</button>
+                    <div class="field full">
+                        <label>Email Address</label>
+                        <div class="input-with-icon-wrapper">
+                            <i class="input-icon-img"><img src="img/emailicon.png" alt="Email Icon"></i>
+                            <input type="email" value="juan@email.com">
+                        </div>
+                    </div>
 
-      </div>
-    </div>
+                    <div class="field full">
+                        <label>Phone Number</label>
+                        <div class="input-with-icon-wrapper">
+                            <i class="input-icon-img"><img src="img/phoneicon.png" alt="Phone Icon"></i>
+                            <input type="text" value="+63 917 123 4567">
+                        </div>
+                    </div>
 
-    <!-- PAYMENT TAB -->
-    <div id="payment" class="tab-content">
-      <div class="settings-card">
-        <h2><img src="img/cardicon.png"> Payment Settings</h2>
-        <p>Manage your payment methods and billing information here.</p>
-      </div>
-    </div>
+                    <div class="field full">
+                        <label>Address</label>
+                        <input type="text" value="123 Main Street, Angeles City, Pampanga">
+                    </div>
 
-    <!-- NOTIFICATIONS TAB -->
-    <div id="notifications" class="tab-content">
-      <div class="settings-card">
-        <h2><img src="img/bellicon.png"> Notification Settings</h2>
-        <p>Control how you receive updates, alerts, and reminders.</p>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="footer-container">
-      <div class="footer-about">
-        <div class="footer-logo-text">
-          <img src="img/logowhiteransparent.png" alt="Param Saken Logo" class="footer-logo">
-          <span class="footer-brand">Param Saken</span>
+                    <button type="submit" class="save-btn">
+                        <img src="img/saveicon.png" alt="Save Icon"> Save Changes
+                    </button>
+                </form>
+            </div>
         </div>
-        <p>
-          Your trusted car rental partner in Pampanga. Providing reliable, affordable vehicle rentals
-          for all your transportation needs across Central Luzon.
-        </p>
-        <div class="footer-socials">
-          <a href="#"><img src="img/fbfooter.png" alt="Facebook"></a>
-          <a href="#"><img src="img/twitterfooter.png" alt="Twitter"></a>
-          <a href="#"><img src="img/instagramfooter.png" alt="Instagram"></a>
+
+        <div id="security" class="tab-content">
+            <div class="settings-card">
+                <h2><img src="img/lockicon.png" alt=""> Security Settings</h2>
+
+                <div class="section">
+                    <h3>Change Password</h3>
+
+                    <label for="current">Current Password</label>
+                    <input type="password" id="current" placeholder="Enter current password">
+
+                    <label for="new">New Password</label>
+                    <input type="password" id="new" placeholder="Enter new password">
+
+                    <label for="confirm">Confirm New Password</label>
+                    <input type="password" id="confirm" placeholder="Re-enter new password">
+                </div>
+
+                <hr>
+
+                <div class="two-factor">
+                    <div class="text">
+                        <h4>Two-Factor Authentication</h4>
+                        <p>Add an extra layer of security</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="save-btn">
+                    <img src="img/saveicon.png" alt=""> Save Changes
+                </button> 
+            </div>
         </div>
-      </div>
 
-      <div class="footer-contact">
-        <h4>Contact Us</h4>
-        <ul>
-          <li><img src="img/contactfooter.png" alt="Phone"> +63 917 123 4567</li>
-          <li><img src="img/inboxfooter.png" alt="Email"> info@paramsaken.com</li>
-          <li><img src="img/locationfooter.png" alt="Location"> 123 Main Street, Angeles City, Pampanga</li>
-        </ul>
-      </div>
+        <div id="payment" class="tab-content">
+            <div class="settings-card">
+                <h2><img src="img/cardicon.png" alt=""> Payment Methods</h2>
 
-      <div class="footer-links">
-        <h4>Quick Links</h4>
-        <ul>
-          <li><a href="#">Fleet</a></li>
-          <li><a href="#">Booking</a></li>
-          <li><a href="#">Terms & Conditions</a></li>
-          <li><a href="#">Privacy Policy</a></li>
-        </ul>
-      </div>
-    </div>
+                <h4>Saved Payment Methods</h4>
+                <div class="saved-methods">
+                    <div class="method-card">
+                        <div class="method-info">
+                            <img src="img/visa.jpg" alt="VISA">
+                            <div class="method-text">
+                                <h4>•••• •••• •••• 1234</h4>
+                                <p>Expires 12/25</p>
+                            </div>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
 
-    <div class="footer-bottom">
-      <p>© 2025 Param Saken Car Rental. All rights reserved.</p>
-    </div>
-  </footer>
+                    <div class="method-card">
+                        <div class="method-info">
+                            <img src="img/gcash.jpg" alt="GCash">
+                            <div class="method-text">
+                                <h4>•••• •••• 5678</h4>
+                                <p>GCash Account</p>
+                            </div>
+                        </div>
+                        <button class="remove-btn">Remove</button>
+                    </div>
+                </div>
 
-  <!-- JS for Tabs -->
-  <script>
-    const tabs = document.querySelectorAll('.tab');
-    const contents = document.querySelectorAll('.tab-content');
+                <h4>Add New Payment Method</h4>
+                <div class="add-methods">
+                    <button>Credit Card</button>
+                    <button>GCash</button>
+                    <button>PayMaya</button>
+                </div>
 
-    tabs.forEach(tab => {
-      tab.addEventListener('click', () => {
-        // remove active class
-        tabs.forEach(t => t.classList.remove('active'));
-        contents.forEach(c => c.classList.remove('active'));
+                <button type="submit" class="save-btn">
+                    <img src="img/saveicon.png" alt=""> Save Changes
+                </button>
+            </div>
+        </div>
 
-        // add active to clicked
-        tab.classList.add('active');
-        document.getElementById(tab.dataset.tab).classList.add('active');
-      });
-    });
-  </script>
+
+        <div id="notifications" class="tab-content">
+            <div class="settings-card">
+                <h2><img src="img/bellicon.png" alt=""> Notification Preferences</h2>
+
+                <div class="notification-item">
+                    <div class="notif-text">
+                        <h4>Email Notifications</h4>
+                        <p>Booking confirmations and updates</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-text">
+                        <h4>SMS Notifications</h4>
+                        <p>Important booking alerts</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-text">
+                        <h4>Promotional Emails</h4>
+                        <p>Special offers and discounts</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <div class="notification-item">
+                    <div class="notif-text">
+                        <h4>Rental Reminders</h4>
+                        <p>Return date reminders</p>
+                    </div>
+                    <label class="switch">
+                        <input type="checkbox">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+
+                <button type="submit" class="save-btn">
+                    <img src="img/saveicon.png" alt=""> Save Changes
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo-text">
+                    <img src="img/logowhiteransparent.png" alt="Param Saken Logo" class="footer-logo">
+                    <span class="footer-brand">Param Saken</span>
+                </div>
+                <p>
+                    Your trusted car rental partner in Pampanga. Providing reliable, affordable vehicle rentals
+                    for all your transportation needs across Central Luzon.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><img src="img/fbfooter.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/twitterfooter.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/instagramfooter.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><img src="img/contactfooter.png" alt="Phone"> +63 917 123 4567</li>
+                    <li><img src="img/inboxfooter.png" alt="Email"> info@paramsaken.com</li>
+                    <li><img src="img/locationfooter.png" alt="Location"> 123 Main Street, Angeles City, Pampanga</li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Fleet</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Param Saken Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const tabs = document.querySelectorAll('.tab');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                // remove active class
+                tabs.forEach(t => t.classList.remove('active'));
+                contents.forEach(c => c.classList.remove('active'));
+
+                // add active to clicked
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+    </script>
 
 </body>
 </html>
