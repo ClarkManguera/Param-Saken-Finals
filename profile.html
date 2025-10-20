@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile Dashboard</title>
+    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logoblacktransperent.png" alt="Param Saken Logo"> 
+            <span>Param Saken</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="hom">Home</a></li>
+                <li><a href="#">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="#" class="active">Profile</a></li> 
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-content-wrapper">
+        <div class="profile-dashboard-container">
+            
+            <div class="user-header-card">
+                <div class="user-info-group">
+                    <img src="img/juan.jpg" alt="Profile Avatar" class="dashboard-avatar">
+                    <div class="user-details">
+                        <h1 class="user-name">Juan Dela Cruz</h1>
+                        <span class="user-tag">Regular Customer</span>
+                        <div class="user-stats">
+                            <p><i class="far fa-calendar-alt"></i> Member since Jan 2023</p>
+                            <p><i class="fas fa-car-side"></i> 12 Total Rentals</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="settings.html" class="btn-edit-profile">
+                    <i class="fas fa-pencil-alt"></i> Edit Profile
+                </a>
+            </div>
+            
+            <div class="dashboard-content-grid">
+                
+                <div class="bookings-column">
+                    
+                    <div class="section-card upcoming-bookings">
+                        <h2><i class="far fa-clock"></i> Upcoming Bookings</h2>
+                        
+                        <div class="booking-item">
+                            <div class="item-left">
+                                <h4 class="car-model">Toyota Vios</h4>
+                                <p class="location-date"><i class="fas fa-map-marker-alt"></i> Angeles City</p>
+                                <p class="location-date date-range">Jan 15 - Jan 18, 2025</p>
+                            </div>
+                            <div class="item-right">
+                                <span class="price">₱700</span>
+                                <span class="status confirmed">Confirmed</span>
+                            </div>
+                        </div>
+
+                        <div class="booking-item">
+                            <div class="item-left">
+                                <h4 class="car-model">Honda City</h4>
+                                <p class="location-date"><i class="fas fa-map-marker-alt"></i> Clark</p>
+                                <p class="location-date date-range">Jan 25 - Jan 27, 2025</p>
+                            </div>
+                            <div class="item-right">
+                                <span class="price">₱700</span>
+                                <span class="status pending">Pending</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="section-card past-rentals">
+                        <h2><i class="fas fa-calendar-check"></i> Past Rentals</h2>
+                        
+                        <div class="past-item">
+                            <div class="item-left">
+                                <h4 class="car-model">Toyota Innova</h4>
+                                <p class="location-date date-range">Nov 20 - Nov 22, 2024</p>
+                            </div>
+                            <div class="item-right">
+                                <span class="price">₱900</span>
+                                <span class="rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="saved-vehicles-column">
+                    <h2><i class="far fa-heart"></i> Saved Vehicles</h2>
+                    
+                    <div class="vehicle-card">
+                        <img src="img/TOYOTA VIOS.jpg" alt="Toyota Vios" class="vehicle-img-saved">
+                        <div class="vehicle-details">
+                            <h4 class="model-name">Toyota Vios</h4>
+                            <span class="type">Sedan</span>
+                            <div class="tags">
+                                <span>5 Seats</span>
+                                <span>Automatic</span>
+                                <span>AC</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="price">₱700/day</span>
+                                <button class="btn-rent-now">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="vehicle-card">
+                        <img src="img/INNOVA.jpg" alt="Toyota Innova" class="vehicle-img-saved">
+                        <div class="vehicle-details">
+                            <h4 class="model-name">Toyota Innova</h4>
+                            <span class="type">MPV</span>
+                            <div class="tags">
+                                <span>8 Seats</span>
+                                <span>Automatic</span>
+                                <span>AC</span>
+                            </div>
+                            <div class="card-footer">
+                                <span class="price">₱900/day</span>
+                                <button class="btn-rent-now">Rent Now</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-about">
+                <div class="footer-logo-text">
+                    <img src="img/logowhiteransparent.png" alt="Param Saken Logo" class="footer-logo">
+                    <span class="footer-brand">Param Saken</span>
+                </div>
+                <p>
+                    Your trusted car rental partner in Pampanga. Providing reliable, affordable vehicle rentals
+                    for all your transportation needs across Central Luzon.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><img src="img/fbfooter.png" alt="Facebook"></a>
+                    <a href="#"><img src="img/twitterfooter.png" alt="Twitter"></a>
+                    <a href="#"><img src="img/instagramfooter.png" alt="Instagram"></a>
+                </div>
+            </div>
+
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <ul>
+                    <li><img src="img/contactfooter.png" alt="Phone"> +63 917 123 4567</li>
+                    <li><img src="img/inboxfooter.png" alt="Email"> info@paramsaken.com</li>
+                    <li><img src="img/locationfooter.png" alt="Location"> 123 Main Street, Angeles City, Pampanga</li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#">Fleet</a></li>
+                    <li><a href="#">Booking</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Param Saken Car Rental. All rights reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
