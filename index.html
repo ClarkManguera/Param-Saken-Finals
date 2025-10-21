@@ -8,21 +8,31 @@
 </head>
 <body>
   <!-- Navbar -->
-<header class="navbar">
-  <div class="logo">
-    <img src="img/logoblacktransperent.png" alt="Param Saken Logo">
-    <span>Param Saken</span>
-  </div>
-  <nav>
-    <ul>
-      <li><a href="hom" class="active">Home</a></li>
-      <li><a href="#">Book Now</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="#">Profile</a></li>
-      <li><a href="settings.html">Settings</a></li>
-    </ul>
-  </nav>
-</header>
+
+    <header class="navbar">
+        <div class="logo">
+            <img src="img/logoblacktransperent.png" alt="Param Saken Logo"> 
+            <span>Param Saken</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="toyota.html">Book Now</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</div>
+
+
+    
 
 
   <!-- Hero -->
@@ -58,7 +68,7 @@
           <span>Automatic</span>
           <span>AC</span>
         </div>
-        <button>Book Now</button>
+<a href="xpander.html" class="book-btn">Book Now</a>
       </div>
 
       <!-- Toyota Vios -->
@@ -74,7 +84,7 @@
           <span>Automatic</span>
           <span>AC</span>
         </div>
-        <button>Book Now</button>
+<a href="toyota.html" class="book-btn">Book Now</a>
       </div>
 
       <!-- Honda City -->
@@ -90,7 +100,7 @@
           <span>Manual</span>
           <span>AC</span>
         </div>
-        <button>Book Now</button>
+<a href="honda.html" class="book-btn">Book Now</a>
       </div>
 
       <!-- Toyota Innova -->
@@ -106,7 +116,7 @@
           <span>Automatic</span>
           <span>AC</span>
         </div>
-        <button>Book Now</button>
+<a href="innova.html" class="book-btn">Book Now</a>
       </div>
 
     </div>
@@ -188,3 +198,12 @@
 
 </body>
 </html>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.querySelector('.menu');
+
+  hamburger.addEventListener('click', () => {
+    menu.classList.toggle('active');
+  });
+</script>
