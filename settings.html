@@ -8,22 +8,29 @@
 </head>
 <body>
 
+    <!-- ======================== -->
+    <!-- 🧭 NAVBAR -->
+    <!-- ======================== -->
+
     <header class="navbar">
         <div class="logo">
-            <img src="img/logoblacktransperent.png" alt="Param Saken Logo">
+            <img src="img/logoblacktransperent.png" alt="Param Saken Logo"> 
             <span>Param Saken</span>
         </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Book Now</a></li>
+                <li><a href="toyota.html">Book Now</a></li>
                 <li><a href="about.html">About Us</a></li>
-                <li><a href="#">Profile</a></li>
-                <li><a href="#" class="active">Settings</a></li>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="settings.html" class="active">Settings</a></li>
             </ul>
         </nav>
     </header>
 
+    <!-- ======================== -->
+    <!-- ⚙ SETTINGS CONTENT -->
+    <!-- ======================== -->
     <main class="settings-container">
         <h1>Account Settings</h1>
 
@@ -34,6 +41,7 @@
             <button class="tab" data-tab="notifications"><img src="img/bellicon.png"> Notifications</button>
         </div>
 
+        <!-- Account Info Tab -->
         <div id="account" class="tab-content active">
             <div class="card">
                 <div class="card-header-with-icon">
@@ -81,13 +89,13 @@
             </div>
         </div>
 
+        <!-- Security Tab -->
         <div id="security" class="tab-content">
             <div class="settings-card">
                 <h2><img src="img/lockicon.png" alt=""> Security Settings</h2>
 
                 <div class="section">
                     <h3>Change Password</h3>
-
                     <label for="current">Current Password</label>
                     <input type="password" id="current" placeholder="Enter current password">
 
@@ -117,6 +125,7 @@
             </div>
         </div>
 
+        <!-- Payment Tab -->
         <div id="payment" class="tab-content">
             <div class="settings-card">
                 <h2><img src="img/cardicon.png" alt=""> Payment Methods</h2>
@@ -159,7 +168,7 @@
             </div>
         </div>
 
-
+        <!-- Notifications Tab -->
         <div id="notifications" class="tab-content">
             <div class="settings-card">
                 <h2><img src="img/bellicon.png" alt=""> Notification Preferences</h2>
@@ -215,6 +224,20 @@
         </div>
     </main>
 
+    <!-- ======================== -->
+    <!-- ✅ TOAST NOTIFICATION -->
+    <!-- ======================== -->
+    <div id="toast" class="toast">
+      <div class="toast-icon">✔</div>
+      <div class="toast-text">
+        <strong>Settings saved successfully!</strong>
+        <p>Your account settings have been updated!</p>
+      </div>
+    </div>
+
+    <!-- ======================== -->
+    <!-- 🦶 FOOTER -->
+    <!-- ======================== -->
     <footer>
         <div class="footer-container">
             <div class="footer-about">
@@ -258,19 +281,29 @@
         </div>
     </footer>
 
+    <!-- ======================== -->
+    <!-- 📜 SCRIPT -->
+    <!-- ======================== -->
     <script>
         const tabs = document.querySelectorAll('.tab');
         const contents = document.querySelectorAll('.tab-content');
+        const toast = document.getElementById('toast');
+        const saveButtons = document.querySelectorAll('.save-btn');
 
         tabs.forEach(tab => {
             tab.addEventListener('click', () => {
-                // remove active class
                 tabs.forEach(t => t.classList.remove('active'));
                 contents.forEach(c => c.classList.remove('active'));
-
-                // add active to clicked
                 tab.classList.add('active');
                 document.getElementById(tab.dataset.tab).classList.add('active');
+            });
+        });
+
+        saveButtons.forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.preventDefault();
+                toast.classList.add('show');
+                setTimeout(() => toast.classList.remove('show'), 3000);
             });
         });
     </script>
