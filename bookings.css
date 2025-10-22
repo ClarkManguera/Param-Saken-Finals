@@ -911,3 +911,180 @@ footer {
     from {transform: translateY(50px); opacity: 0;}
     to {transform: translateY(0); opacity: 1;}
 }
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* ---------- Tablets (≤1024px) ---------- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 50px;
+  }
+
+  .navbar nav ul {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .booking-page {
+    padding: 30px 60px;
+  }
+
+  .booking-content-container {
+    flex-direction: column;
+  }
+
+  .sidebar-content {
+    width: 100%;
+  }
+
+  .rental-details-card,
+  .selected-vehicle-card,
+  .booking-summary-card,
+  .need-help-card {
+    width: 100%;
+  }
+
+  footer {
+    padding: 30px 0;
+  }
+
+  .footer-container {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .footer-contact,
+  .footer-links {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+/* ---------- Mobile (≤768px) ---------- */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar nav ul {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  .navbar.active nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 10px 0;
+    gap: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  /* BOOKING LAYOUT */
+  .booking-page {
+    padding: 20px;
+  }
+
+  .booking-content-container {
+    flex-direction: column;
+  }
+
+  .rental-details-card,
+  .selected-vehicle-card,
+  .booking-summary-card,
+  .need-help-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  /* FORM FIELDS */
+  .form-group-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .btn-next,
+  .btn-complete-booking {
+    width: 100%;
+  }
+
+  /* STEP INDICATOR */
+  .step-line {
+    width: 40px;
+  }
+
+  /* PAYMENT OPTION */
+  .payment-methods-group {
+    gap: 10px;
+  }
+
+  .payment-option {
+    padding: 12px;
+  }
+
+  .option-details h4 {
+    font-size: 14px;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-contact,
+  .footer-links {
+    margin: 0;
+  }
+
+  .footer-about p {
+    text-align: center;
+  }
+}
+
+/* ---------- Extra Small (≤480px) ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo span {
+    font-size: 13px;
+  }
+
+  .step {
+    width: 28px;
+    height: 28px;
+    font-size: 12px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .booking-page {
+    padding: 15px;
+  }
+
+  .footer-brand {
+    font-size: 16px;
+  }
+
+  .footer-about p {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
