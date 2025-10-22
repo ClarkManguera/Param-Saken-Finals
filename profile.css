@@ -19,10 +19,7 @@ body {
     padding-bottom: 60px; 
 }
 
-/* ==================================== */
 /* =========== NAVBAR STYLES ========== */
-/* (Your original styles) */
-/* ==================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -281,7 +278,6 @@ body {
 
 /* --- Saved Vehicles Column (Right) --- */
 .saved-vehicles-column {
-    /* Saved Vehicles is not a single card, but a column title + multiple cards */
 }
 
 .vehicle-card {
