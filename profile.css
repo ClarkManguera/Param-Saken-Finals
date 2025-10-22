@@ -19,10 +19,7 @@ body {
     padding-bottom: 60px; 
 }
 
-/* ==================================== */
 /* =========== NAVBAR STYLES ========== */
-/* (Your original styles) */
-/* ==================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -76,10 +73,7 @@ body {
     background-color: #f2f4f7;
 }
 
-/* ==================================== */
 /* ====== PROFILE DASHBOARD STYLES ==== */
-/* ==================================== */
-
 .profile-dashboard-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -93,7 +87,7 @@ body {
     align-items: flex-start;
     padding: 30px 0;
     margin-bottom: 20px;
-    border-bottom: 1px solid #e4e7ec; /* Subtle divider from the image */
+    border-bottom: 1px solid #e4e7ec; /
 }
 
 .user-info-group {
@@ -167,7 +161,7 @@ body {
 /* --- Content Grid Layout --- */
 .dashboard-content-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr; /* Left column wider than right */
+    grid-template-columns: 2fr 1fr;
     gap: 30px;
 }
 
@@ -281,7 +275,6 @@ body {
 
 /* --- Saved Vehicles Column (Right) --- */
 .saved-vehicles-column {
-    /* Saved Vehicles is not a single card, but a column title + multiple cards */
 }
 
 .vehicle-card {
@@ -366,8 +359,7 @@ body {
 /* --- Media Queries for Responsiveness --- */
 @media (max-width: 1050px) {
     .dashboard-content-grid {
-        grid-template-columns: 1fr; /* Stack columns on smaller screens */
-    }
+        grid-template-columns: 1fr; 
 }
 
 @media (max-width: 768px) {
@@ -386,10 +378,7 @@ body {
         justify-content: center;
     }
 }
-/* ==================================== */
 /* =========== FOOTER STYLES ========== */
-/* (Your original styles) */
-/* ==================================== */
 footer {
     background-color: #101828;
     color: #f5f5f5;
@@ -584,10 +573,7 @@ footer {
         align-items: flex-start;
     }
 }
-/* ==================================== */
 /* ======= ACCOUNT SETTINGS PAGE ====== */
-/* ==================================== */
-
 .settings-container {
   max-width: 1000px;
   margin: 60px auto;
@@ -727,10 +713,8 @@ input:focus {
   cursor: pointer;
   transition: background 0.2s ease;
   position: relative;
-  left: 10px; /* moved slightly right */
-  margin-top: 15px; /* moved slightly lower */
-}
-
+  left: 10px; 
+  margin-top: 15px; 
 .save-btn img {
   width: 16px;
   height: 16px;
@@ -934,3 +918,4 @@ input:checked + .slider:before {
     left: 0;
   }
 }
+
