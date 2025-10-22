@@ -1,14 +1,15 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI Symbol', 'Segoe UI', sans-serif;
 }
 
 body {
-    background-color: #f7f8fa;
-    color: #222;
-    overflow-x: hidden;
+  background-color: #f7f8fa;
+  color: #222;
+  overflow-x: hidden;
+
 }
 
 /* ===== NAVBAR (Your Original Styles) ===== */
@@ -795,3 +796,366 @@ footer {
     width: 100%;
 }
 
+/* ====================== */
+/* ✅ TOAST NOTIFICATION  */
+/* ====================== */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background: #fff;
+  color: #101828;
+  padding: 16px 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  max-width: 340px;
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 2000;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.toast-icon {
+  background: #101828;
+  color: #fff;
+  border-radius: 50%;
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  flex-shrink: 0;
+}
+
+.toast-text strong {
+  font-size: 15px;
+  font-weight: 600;
+  display: block;
+}
+
+.toast-text p {
+  margin: 2px 0 0 0;
+  font-size: 13px;
+  color: #475467;
+}
+
+/* =============================== */
+/* 📱 RESPONSIVE DESIGN ADD-ON     */
+/* Keeps original desktop layout   */
+/* =============================== */
+
+/* 🖥 Tablet View (max-width: 1024px) */
+@media (max-width: 1024px) {
+  .settings-container {
+    padding: 0 20px;
+  }
+
+  .navbar nav ul {
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .tabs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .input-group {
+    flex-wrap: wrap;
+  }
+
+  .card,
+  .settings-card {
+    padding: 20px;
+  }
+
+  .method-card {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .add-methods {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* 📲 Mobile & Small Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  /* Navbar stacks */
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .navbar nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+  }
+
+  /* Tabs wrap */
+  .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+
+  .tab {
+    flex: 1 1 calc(50% - 8px);
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  /* Forms stack vertically */
+  .input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .field input,
+  .input-with-icon-wrapper input {
+    width: 100%;
+  }
+
+  /* Save buttons full width */
+  .save-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Payment methods stack */
+  .method-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .add-methods {
+    flex-direction: column;
+  }
+
+  /* Toast moves to bottom for better UX */
+  .toast {
+    right: 16px;
+    bottom: 20px;
+    top: auto;
+  }
+}
+
+/* =============================== */
+/* 📱 RESPONSIVE DESIGN - MOBILE VIEW */
+/* =============================== */
+
+/* Tablet and below */
+@media (max-width: 1024px) {
+  .settings-container {
+    max-width: 95%;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+  }
+
+  .tab {
+    flex: 1 1 calc(50% - 10px);
+    justify-content: center;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .input-group {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .input-group .field,
+  .input-with-icon-wrapper input {
+    width: 100%;
+  }
+
+  .save-btn {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .navbar nav ul {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-column {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  /* Navbar collapses to column */
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .navbar .logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .navbar .logo img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .navbar .logo span {
+    font-size: 18px;
+  }
+
+  .navbar nav ul {
+    display: none; /* hidden when menu icon shows */
+  }
+
+  /* Center form */
+  .settings-container {
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  .settings-container h1 {
+    text-align: left;
+    font-size: 20px;
+    margin-bottom: 16px;
+  }
+
+  .tabs {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .tab {
+    flex: 1 1 calc(50% - 8px);
+    font-size: 13px;
+    justify-content: center;
+  }
+
+  .personal-info,
+  .card,
+  .settings-card {
+    padding: 16px;
+    border-radius: 8px;
+  }
+
+  .field label {
+    font-size: 14px;
+  }
+
+  .field input {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  .save-btn {
+    width: 100%;
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  /* Footer mobile */
+  footer {
+    padding: 30px 20px;
+    text-align: center;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .footer-column {
+    width: 100%;
+  }
+
+  .footer-column h4 {
+    margin-bottom: 10px;
+  }
+
+  .footer-column p,
+  .footer-column a {
+    font-size: 14px;
+  }
+
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .footer-bottom {
+    text-align: center;
+    font-size: 13px;
+    margin-top: 20px;
+  }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+  .tab {
+    flex: 1 1 100%;
+  }
+
+  .navbar .logo span {
+    font-size: 16px;
+  }
+
+  .settings-container h1 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
