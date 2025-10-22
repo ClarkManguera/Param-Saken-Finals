@@ -395,22 +395,64 @@ footer {
   width: 100%;
 }
 
-/* === ABOUT HEADER === */
 .about-header {
   background-color: #000;
   color: #fff;
-  padding: 140px 120px 100px;
-  text-align: left;
+  padding: 100px 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.about-header h1 {
+.about-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 60px;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h1 {
   font-size: 3rem;
   margin-bottom: 10px;
 }
 
-.about-header p {
-  font-size: 1.3rem;
+.about-text p {
+  font-size: 1.2rem;
   color: #cfcfcf;
+}
+
+.about-video {
+  flex: 1;
+  min-width: 300px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-video video {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  border: 2px solid #222;
+}
+
+/* For tablets & phones */
+@media (max-width: 900px) {
+  .about-header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-video video {
+    max-width: 320px;
+  }
 }
 
 /* === OUR STORY === */
@@ -753,5 +795,274 @@ footer {
     padding: 14px 0;
     width: 100%;
     text-align: center;
+  }
+}
+
+/* === RESPONSIVE DESIGN === */
+
+/* ---------- Tablets (≤1024px) ---------- */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 15px 40px;
+  }
+
+  .navbar nav ul {
+    gap: 20px;
+    padding-right: 20px;
+  }
+
+  .hero {
+    padding: 80px 20px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .mv-item {
+    max-width: 100%;
+    margin-bottom: 40px;
+  }
+
+  .footer-container {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .footer-contact,
+  .footer-links {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .footer-about {
+    text-align: center;
+  }
+}
+
+/* ---------- Mobile (≤768px) ---------- */
+@media (max-width: 768px) {
+  /* NAVBAR */
+  .navbar {
+    padding: 15px 25px;
+  }
+
+  .navbar nav ul {
+    display: none; /* hide menu on mobile */
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* Show nav when active */
+  .navbar.active nav ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    background: #fff;
+    width: 100%;
+    padding: 15px 0;
+    gap: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  }
+
+  .navbar nav ul li a {
+    padding: 10px 0;
+    display: block;
+    text-align: center;
+  }
+
+  /* HERO */
+  .hero h1 {
+    font-size: 26px;
+  }
+
+  .hero p {
+    font-size: 14px;
+  }
+
+  .search-box {
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    margin: 0 auto;
+  }
+
+  .search-box input,
+  .search-box button {
+    width: 100%;
+  }
+
+  /* VEHICLE CARDS */
+  .vehicles {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vehicle-card {
+    width: 90%;
+  }
+
+  /* WHY CHOOSE */
+  .why {
+    padding: 60px 20px;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  /* TESTIMONIALS */
+  .testimonial {
+    width: 90%;
+  }
+
+  /* ABOUT PAGE */
+  .about-header {
+    padding: 100px 20px;
+    text-align: center;
+  }
+
+  .about-header h1 {
+    font-size: 2rem;
+  }
+
+  .about-story {
+    margin: 60px auto;
+    padding: 0 20px;
+  }
+
+  .mission-vision {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px;
+  }
+
+  .mv-item {
+    max-width: 100%;
+  }
+
+  /* FOOTER */
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+
+  .footer-contact,
+  .footer-links {
+    margin: 0;
+  }
+
+  .footer-about p {
+    text-align: center;
+  }
+}
+
+/* ---------- Extra Small (≤480px) ---------- */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 12px 20px;
+  }
+
+  .logo span {
+    font-size: 13px;
+  }
+
+  .hero {
+    padding: 60px 15px;
+  }
+
+  .hero h1 {
+    font-size: 22px;
+  }
+
+  .vehicle-card {
+    width: 100%;
+  }
+
+  .footer-brand {
+    font-size: 16px;
+  }
+
+  .footer-about p {
+    font-size: 12px;
+  }
+
+  .footer-bottom p {
+    font-size: 11px;
+  }
+}
+
+.about-header {
+  background-color: #000;
+  color: #fff;
+  padding: 100px 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.about-text {
+  flex: 1;
+  min-width: 280px;
+}
+
+.about-text h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.about-text p {
+  font-size: 1.2rem;
+  color: #cfcfcf;
+}
+
+.about-video {
+  flex: 1;
+  min-width: 280px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-video video {
+  width: 100%;
+  max-width: 420px;
+  border-radius: 12px;
+  border: 2px solid #222;
+}
+
+
+/* For mobile screens only */
+@media (max-width: 900px) {
+  .about-header-content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-video video {
+    max-width: 320px;
   }
 }
